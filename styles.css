@@ -1,0 +1,200 @@
+/* استفاده از فونت B Nazanin */
+@font-face {
+    font-family: 'B Nazanin';
+    src: url('https://cdn.jsdelivr.net/gh/aminjafari/font-b-nazanin@1.0.0/BNazanin-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'B Nazanin', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    text-align: center;
+    direction: rtl;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #d63384;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+}
+
+.dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: right;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.dropdown-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* استایل منوی کشویی */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    width: 250px;
+    text-align: right;
+}
+
+/* استایل لینک‌های منوی کشویی */
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* نمایش منوی کشویی هنگام هاور */
+.dropdown-item:hover .dropdown-menu {
+    display: flex;
+}
+
+/* فاصله بین زیرمجموعه‌ها */
+.dropdown-item + .dropdown-item {
+    margin-top: 10px;  /* فاصله بین هر مجموعه */
+}
+
+/* استایل برای لینک‌های منوی کشویی هنگام هاور */
+.dropdown-menu a:hover {
+    color: #d63384;
+    font-weight: bold;
+}
+
+section.banner {
+    background-color: #d63384;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section.banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section.banner p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+section.banner .btn {
+    background-color: #fff;
+    color: #d63384;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+section.banner .btn:hover {
+    background-color: #f8f9fa;
+    color: #d63384;
+}
+
+/* سبک‌های منو کشویی */
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+nav ul li a:hover {
+    color: #d63384;
+}
+
+.container {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+/* بنر */
+.banner {
+    padding: 50px 10%;
+    background-color: #ffcccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* دکمه */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #d63384;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* واکنش‌گرایی برای موبایل */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
